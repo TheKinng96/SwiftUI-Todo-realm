@@ -11,6 +11,11 @@
 		B2FDE2922815645A0083A449 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE2912815645A0083A449 /* ContentView.swift */; };
 		B2FDE2942815645F0083A449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FDE2932815645F0083A449 /* Assets.xcassets */; };
 		B2FDE2972815645F0083A449 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FDE2962815645F0083A449 /* Preview Assets.xcassets */; };
+		B2FDE29F2815652E0083A449 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE29E2815652E0083A449 /* TaskView.swift */; };
+		B2FDE2A1281567050083A449 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE2A0281567050083A449 /* TaskList.swift */; };
+		B2FDE2A328156A2D0083A449 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE2A228156A2D0083A449 /* AddTaskView.swift */; };
+		B2FDE2A628156A980083A449 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE2A528156A980083A449 /* Title.swift */; };
+		B2FDE2A828156CBB0083A449 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FDE2A728156CBB0083A449 /* AddButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		B2FDE2912815645A0083A449 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2FDE2932815645F0083A449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2FDE2962815645F0083A449 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2FDE29E2815652E0083A449 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		B2FDE2A0281567050083A449 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		B2FDE2A228156A2D0083A449 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		B2FDE2A528156A980083A449 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B2FDE2A728156CBB0083A449 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				B2FDE28F2815645A0083A449 /* TodoApp.swift */,
-				B2FDE2912815645A0083A449 /* ContentView.swift */,
+				B2FDE29D281565180083A449 /* Views */,
 				B2FDE2932815645F0083A449 /* Assets.xcassets */,
 				B2FDE2952815645F0083A449 /* Preview Content */,
 			);
@@ -65,6 +75,27 @@
 				B2FDE2962815645F0083A449 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B2FDE29D281565180083A449 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2FDE2A428156A890083A449 /* Helpers */,
+				B2FDE2912815645A0083A449 /* ContentView.swift */,
+				B2FDE29E2815652E0083A449 /* TaskView.swift */,
+				B2FDE2A228156A2D0083A449 /* AddTaskView.swift */,
+				B2FDE2A0281567050083A449 /* TaskList.swift */,
+				B2FDE2A728156CBB0083A449 /* AddButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2FDE2A428156A890083A449 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B2FDE2A528156A980083A449 /* Title.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FDE2A1281567050083A449 /* TaskList.swift in Sources */,
+				B2FDE2A828156CBB0083A449 /* AddButton.swift in Sources */,
+				B2FDE2A328156A2D0083A449 /* AddTaskView.swift in Sources */,
+				B2FDE29F2815652E0083A449 /* TaskView.swift in Sources */,
 				B2FDE2922815645A0083A449 /* ContentView.swift in Sources */,
+				B2FDE2A628156A980083A449 /* Title.swift in Sources */,
 				B2FDE2902815645A0083A449 /* TodoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
