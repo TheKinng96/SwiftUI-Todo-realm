@@ -6,20 +6,27 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AddTaskView: View {
+  @ObservedRealmObject var taskGroup: TaskGroup
   @State private var taskContent: String = ""
   @Environment(\.dismiss) var dismiss
+  @FocusState private var focus: Bool
   
   var body: some View {
-    VStack {
+    VStack(alignment: .leading) {
       Title(titleName: "Add new task")
       
       TextField("Enter new task", text: $taskContent)
+        .focused($focus, equals: true)
         .textFieldStyle(.roundedBorder)
       
       Button("Add") {
-        print($taskContent)
+        let newTask = Task(title: taskContent)
+        $taskGroup.tasks.append(newTask)
+        focus = false
+        taskContent = ""
         dismiss()
       }
       .foregroundColor(.white)
@@ -27,6 +34,7 @@ struct AddTaskView: View {
       .padding(.horizontal)
       .background(Color(hue: 0.438, saturation: 0.971, brightness: 0.634))
       .cornerRadius(30)
+      .disabled(taskContent.isEmpty)
       
       Spacer()
     }
@@ -38,6 +46,7 @@ struct AddTaskView: View {
 
 struct AddTaskView_Previews: PreviewProvider {
   static var previews: some View {
-    AddTaskView()
+    AddTaskView(taskGroup: TaskGroup())
+      .previewInterfaceOrientation(.portraitUpsideDown)
   }
 }

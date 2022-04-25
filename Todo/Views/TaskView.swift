@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct TaskView: View {
   var taskContent: String
@@ -19,8 +20,6 @@ struct TaskView: View {
     HStack(spacing: 20) {
       Image(systemName: checkboxImage())
       Text(taskContent)
-      Divider()
-      Image(systemName: "trash")
     }
   }
 }

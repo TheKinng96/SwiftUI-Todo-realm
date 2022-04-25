@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct TaskList: View {
+  @ObservedRealmObject var taskGroup: TaskGroup
   var body: some View {
     VStack(alignment: .leading) {
       Text("Tasks")
@@ -16,7 +18,9 @@ struct TaskList: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
       List {
-        TaskView(taskContent: "hihi", progress: false)
+        ForEach(taskGroup.tasks) { task in
+          TaskView(taskContent: task.title, progress: task.progress)
+        }
       }
       .padding()
     }
@@ -27,6 +31,6 @@ struct TaskList: View {
 
 struct TaskList_Previews: PreviewProvider {
   static var previews: some View {
-    TaskList()
+    TaskList(taskGroup: TaskGroup())
   }
 }
